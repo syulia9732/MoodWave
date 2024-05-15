@@ -10,34 +10,55 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">
-                        <img src="images/logo.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <h4>MoodWave</h4>
-                    </a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#"><h5>Who are we?</h5></a>
-                </li>
-                <li>
-                    <a href="#"><h5>About this project</h5></a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <div class="bg">
+        <div class="bg-overlay"></div>
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <img src="images/logo.png">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <h4>MoodWave</h4>
+                        </a>
+                    </li>
+                </ul>
+                
+                <ul id="pcLinks">
+                    <li>
+                        <a href="#"><h5>Who are we?</h5></a>
+                    </li>
+                    <li>
+                        <a href="#"><h5>About this project</h5></a>
+                    </li>
+                </ul>
+                
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <div class="hamburger-menu">
+                        <div class="ham-bar bar-top"></div>
+                        <div class="ham-bar bar-mid"></div>
+                        <div class="ham-bar bar-bottom"></div>
+                    </div>
+                </a>
+            </nav>
+        </header>
+        
+        <div id="mobileLinks" class="slide-out display-none">
+            <a href="#"><h5>Who are we?</h5></a>
+            <a href="#"><h5>About this project</h5></a>
+        </div>
     
-
+    </div>
+    
 
 
 
