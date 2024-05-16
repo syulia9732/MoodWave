@@ -1,11 +1,8 @@
 function myFunction() {
-    var links = document.getElementById("mobileLinks");
-    if (links.style.display === "block") {
-        links.style.display = "none";
-        
-    } else {
-      links.style.display = "block";
-      links.style.transform = 'translate(0, 0)';
+    if (mobileMenu.style.display === "block") {        //나와있으면
+        mobileMenu.style.display = "none";             //없애고
+    } else {                                           //꺼내고
+      mobileMenu.style.transform = 'translate(0, 0)';  //위치조정
     }
 }
 
@@ -16,26 +13,36 @@ hamMenu.addEventListener('click', () => {
 
 const mobileMenu = document.querySelector("#mobileLinks");
 const mobileMenuBtn = document.querySelector(".hamburger-menu");
+const mobileMenuBg = document.querySelector(".bg-overlay");
 
 mobileMenuBtn.addEventListener("click", () => {
-    mobileMenuBtn.classList.toggle("active-menu-btn");
     mobileMenu.classList.toggle("slide-out");
     mobileMenu.classList.toggle("slide-in");
-    if (mobileMenu.classList.contains("slide-out")) {
+    if (mobileMenu.classList.contains("slide-out")) { //있으면
+      
+        mobileMenuBg.classList.add("display-none");
       setTimeout(() => {
-        mobileMenu.classList.add("display-none");
-      }, 1000);
-    } else {
-      mobileMenu.classList.remove("display-none");
+        mobileMenu.classList.add("display-none");     //없애고
+      }, 500);
+    } else {                                          //없으면
+      mobileMenu.classList.remove("display-none");   //생기게
+      mobileMenuBg.classList.remove("display-none");
+
     }
 });
   
 window.addEventListener("resize", () => {
-    if (window.innerWidth > 750) {
+    if (window.innerWidth = 834) {
       mobileMenu.classList.add("slide-out");
       mobileMenu.classList.remove("slide-in");
+      mobileMenuBg.classList.add("display-none");
+
       setTimeout(() => {
         mobileMenu.classList.add("display-none");
-      }, 1000);
+        hamMenu.classList.remove('active');
+      }, 300);
+    }
+    else{
+      mobileMenu.classList.remove("display-none");
     }
 });
