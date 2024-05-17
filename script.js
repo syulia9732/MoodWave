@@ -46,3 +46,14 @@ window.addEventListener("resize", () => {
       mobileMenu.classList.remove("display-none");
     }
 });
+
+// box
+function updateScreens() {
+  $('.screen').removeClass('active').eq(currentIndex).addClass('active');
+  $('.dot').removeClass('active').eq(currentIndex).addClass('active');
+  if (currentIndex === totalScreens - 1) {
+    $('.finish').removeAttr('disabled');
+  } else {
+    $('.finish').attr('disabled', 'disabled');
+  }
+}
