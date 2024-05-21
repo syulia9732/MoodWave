@@ -57,3 +57,9 @@ function updateScreens() {
     $('.finish').attr('disabled', 'disabled');
   }
 }
+
+//color background
+// const box = document.querySelector(".box");
+function colorSelected (element) {
+  box.style.background = element.value
+}
