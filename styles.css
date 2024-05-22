@@ -233,8 +233,8 @@ header nav ul:nth-child(2) {
 }
 .box-media{
     margin: 30px auto 0 auto;
-    height: 180px;
-    width: 180px;
+    height: 250px;
+    width: 250px;
     border-radius: 130px;
     background-color: rgba(255, 255, 255, 0.25);
 }
